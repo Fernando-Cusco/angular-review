@@ -1,0 +1,16 @@
+<div class="container">
+    <h4>Usuarios</h4>
+
+    <p>Agregar nuevos usuarios o editar usuarios</p>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-success" [routerLink]="['/usuario/agregar']">Agregar</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-warning" [routerLink]="['/usuario/editar']">Editar</button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+</div>

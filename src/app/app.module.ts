@@ -10,6 +10,11 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ContinuaraPipe } from './continuara.pipe';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HeaderComponent } from './header/header.component';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { AgregarUsuarioComponent } from './usuario/agregar-usuario/agregar-usuario.component';
+import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ProductosDetalleComponent } from './productos-detalle/productos-detalle.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,11 @@ import { HeaderComponent } from './header/header.component';
     ContinuaraPipe,
     NotfoundComponent,
     HeaderComponent,
+    UsuarioComponent,
+    AgregarUsuarioComponent,
+    EditarUsuarioComponent,
+    ProductosComponent,
+    ProductosDetalleComponent,
     
   ],
   imports: [

@@ -1,0 +1,8 @@
+<div class="container">
+    <h4>Descripcion del producto</h4>
+    <p>Producto: {{ producto.nombre }}</p>
+    <p>Descripcion: {{ producto.descripcion }}</p>
+    <p>Precio: {{ producto.precio | currency }}</p>
+    <p>Stock: {{ producto.stock }}</p>
+    <p *ngIf="producto.estado">Estado: {{ producto.estado }}</p>
+</div>

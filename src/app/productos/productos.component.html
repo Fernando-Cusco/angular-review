@@ -1,0 +1,13 @@
+<div class="container">
+
+
+    <div class="productos" *ngFor="let producto of productos">
+        <h5>Producto: {{ producto.nombre }}</h5>
+        <h5>Descripcion: {{ producto.descripcion }}</h5>
+        <h5>Precio: {{ producto.precio | currency }}</h5>
+        <button [routerLink]="['/productoDetalle', producto.nombre, producto.precio]" class="btn btn-warning">Ver</button>
+        <button (click)="detalle(producto)" class="btn btn-warning">Ver</button>
+    </div>
+
+
+</div>
