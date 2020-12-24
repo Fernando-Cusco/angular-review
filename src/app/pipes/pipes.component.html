@@ -1,0 +1,24 @@
+<div class="container">
+
+    <h4>Pipes para texto</h4>
+    
+    <p>{{ titulo | lowercase }} -- LowerCase</p>
+    <p>{{ titulo | uppercase }} -- UpperCase</p>
+    <p>{{ titulo | titlecase }} -- TitleCase</p>
+
+    <h4>Pipes para monedas</h4>
+    <p>{{ saldo | currency }}</p>
+
+    <p>{{ ganancias | percent }}</p>
+
+    <p>{{ fechaNacimiento | date: 'short' }}</p>
+
+
+    <h4>Pipe personalizado</h4>
+    <div class="cuadrado">
+        <p>
+            {{ texto | continuara}}
+        </p>
+    </div>
+
+</div>

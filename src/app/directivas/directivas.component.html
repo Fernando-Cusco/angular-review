@@ -1,0 +1,51 @@
+<h4>Directiva if</h4>
+
+<div *ngIf="!cargando">
+    <p>termino de cargar</p>
+    <div *ngFor="let l of lenguajes">
+        <p>Lenguaje: {{ l }}</p>
+    </div>
+</div>
+<img *ngIf="cargando" src="https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading">
+
+<button class="btn-primary" (click)="cargar()">Cargar</button>
+
+<h4>Directiva for</h4>
+<div class="producto" *ngFor="let producto of productos">
+    <p>Producto: {{ producto.nombre }} </p>
+    <p>Stock: {{ producto.stock }} </p>
+    <p>Fabricante: {{ producto.fabricante }} </p>
+    <p>Fecha: {{ producto.fecha }} </p>
+</div>
+
+<h4>Directiva Switch</h4>
+<div class="tab" [ngSwitch]="pestana">
+    <button (click)="cambiarPestana('perfil')">Perfil</button>
+    <button (click)="cambiarPestana('puntos')">Puntos</button>
+    <button (click)="cambiarPestana('info')">Info</button>
+
+    <div class="tab-content">
+        <p *ngSwitchCase="'perfil'">Este es el perfil</p>
+        <p *ngSwitchCase="'puntos'">Estos son los puntos</p>
+        <p *ngSwitchCase="'info'">Esta es la info</p>
+        <p *ngSwitchDefault>Seleccione una pestaña</p>
+    </div>
+
+    
+</div>
+
+<h4>Directiva NgClass</h4>
+<div [ngClass]="{ 'cuadrado': mostrarCuadrado }">
+    <p>Cuadrado con un fondo verde</p>
+    <button (click)="cambiarFondo()">Alternar</button>
+</div>
+
+<div class="container producto" *ngFor="let producto of productos">
+    <p>Producto: {{ producto.nombre }} </p>
+    <p>Stock: {{ producto.stock }} </p>
+    <p>Fabricante: {{ producto.fabricante }} </p>
+    <p [class.textoImportante]="producto.esImportante">Fecha: {{ producto.fecha }} </p>
+    <p [ngClass]="{'textoImportante': producto.esImportante, 'textoGrande': producto.esImportante}">Es importante</p>
+</div>
+
+

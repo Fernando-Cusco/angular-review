@@ -1,0 +1,32 @@
+<div class="container">
+    <h5>Total dinero: {{ total | currency: '$' }}</h5>
+    <form class="my-4">
+        
+        <div class="form-group">
+          <label for="nombre">Nombres</label>
+          <input  type="text" class="form-control" name="nombre" placeholder="ingrese su nombre" [(ngModel)]="alumno.nombre"/>
+          
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellidos</label>
+          <input  type="apellido" class="form-control" name="apellido" placeholder="ingrese su apellido" [(ngModel)]="alumno.apellido"/>
+        </div>
+        
+        <button class="btn btn-primary" (click)="agregar()">Guardar</button>
+        <div *ngIf="existe" class="alert alert-danger">
+            <p class="py-4">El alumno ya existe</p>
+        </div>
+        <div *ngIf="agregado" class="alert alert-success">
+            <p class="py-4">Alumno agregado con exito</p>
+        </div>
+      </form>
+
+      <h5 class="my-4">Lista de alumnos</h5>
+      <div class="card my-4" *ngFor="let a of alumnos">
+        
+        
+        <div class="card-body" >
+          {{ a.nombre }} {{ a.apellido }}
+        </div>
+      </div>
+</div>
